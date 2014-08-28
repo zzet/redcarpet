@@ -97,7 +97,7 @@ EOE
 This should be **`a bold codespan`**
 However, this should be *`an emphasised codespan`*
 
-* **`ABC`** or **`DEF`**
+* **`ABC`** or **`DEF`** or some.**`method`**
 * Foo bar
 MD
 
@@ -106,7 +106,7 @@ MD
 However, this should be <em><code>an emphasised codespan</code></em></p>
 
 <ul>
-<li><strong><code>ABC</code></strong> or <strong><code>DEF</code></strong></li>
+<li><strong><code>ABC</code></strong> or <strong><code>DEF</code></strong> or some.<strong><code>method</code></strong></li>
 <li>Foo bar</li>
 </ul>
 HTML

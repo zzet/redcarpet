@@ -28,6 +28,9 @@ class MarkdownTest < Redcarpet::TestCase
 
     markdown = @markdown.render("Run 'rake radiant:extensions:rbac_base:migrate'")
     html_equal "<p>Run 'rake radiant:extensions:rbac_base:migrate'</p>\n", markdown
+
+    markdown = @markdown.render("Class.**new**")
+    html_equal "<p>Class.<strong>new</strong></p>\n", markdown
   end
 
   def test_that_urls_are_not_doubly_escaped

@@ -10,6 +10,9 @@ class RedcarpetCompatTest < Redcarpet::TestCase
   def test_compat_api_enables_extensions
     html = RedcarpetCompat.new("This is_just_a test", :no_intra_emphasis).to_html
     html_equal "<p>This is_just_a test</p>\n", html
+
+    html = RedcarpetCompat.new("This (**is just a**) test", :no_intra_emphasis).to_html
+    html_equal "<p>This (<strong>is just a</strong>) test</p>\n", html
   end
 
   def test_compat_api_knows_fenced_code_extension
